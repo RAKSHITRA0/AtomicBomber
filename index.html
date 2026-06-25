@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Atomic Bomber HTML5</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="gameCanvas"></canvas>
+        
+        <div id="ui-layer">
+            <div id="top-bar">
+                <div class="stats-left">
+                    <span class="stat-item" id="bombs-text">💣 x 3</span>
+                    <span class="stat-item" id="nukes-text">☢️ x 0</span>
+                    <span class="stat-item" id="clusters-text">🎇 x 0</span>
+                </div>
+                <div class="stats-center">
+                    <span id="wave-text">Wave 1</span>
+                </div>
+                <div class="stats-right">
+                    <span class="stat-item" id="score-text">⭐ x 0</span>
+                    <span class="stat-item" id="lives-text">✈️ x 3</span>
+                </div>
+            </div>
+            
+            <div id="weapon-controls">
+                <button id="bomb-btn" class="weapon-btn">
+                    <div class="bomb-icon"></div>
+                </button>
+                <div class="special-weapons">
+                    <button id="nuke-btn" class="weapon-btn special-btn">☢️</button>
+                    <button id="cluster-btn" class="weapon-btn special-btn">🎇</button>
+                </div>
+            </div>
+            
+            <div id="start-screen" class="overlay">
+                <h1>ATOMIC BOMBER</h1>
+                <p>Tap or press Space to drop bombs</p>
+                <button id="start-btn">START GAME</button>
+            </div>
+            
+            <div id="game-over-screen" class="overlay hidden">
+                <h1>GAME OVER</h1>
+                <p id="final-score">Score: 0</p>
+                <button id="restart-btn">PLAY AGAIN</button>
+            </div>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
